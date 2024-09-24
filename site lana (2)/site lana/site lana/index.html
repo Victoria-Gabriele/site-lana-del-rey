@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Del Rey Emporium</title>
+    <link rel="stylesheet" href="style.css">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-loja"> 
+    <!--Cabeçalho-->
+    <header id="header">
+        <div class="container">
+            <div class="flex">
+                <div class="logo">
+                    <img src="imagem/logo.png">
+                </div>
+            </div>
+        </div>
+
+        <header>
+            <h1 class="shining-title">Del Rey Emporium</h1>
+          </header>
+
+        <nav> 
+            <ul>
+                <li><a href="#pagina-inicial">Início</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+            </ul>
+
+            <div class="btn-contato">
+                <a href="#contato">
+                    <button>Contato</button>
+                </a>
+           
+    </header> <!-- Fim cabeçalho -->
+
+    <!--BARRA DE PESQUISA-->
+    <div>
+      <title>Barra de Pesquisa</title>
+    </div>
+    <div class="search-container">
+    <form action="/search" method="GET">
+      <input type="search" name="search" placeholder="Pesquisar...">
+      <button type="submit">Pesquisar</button>
+    </form>
+    </div>
+    
+    <!--FIM BARRA DE PESQUISA-->
+
+    <section id="pagina-inicial">
+        <div><h1>Bem-vindo à Del Rey Emporium </h1></div>
+          <!--CARROSSEL DE BANNERS-->
+          <div class="carousel">
+            <div class="carousel-images">
+              <img src="imagem/banner.png" alt="Banner 1">
+              <img src="imagem/Banner paisagem .png" alt="Banner 2">
+              <img src="imagem/Banner paisagem3 .png" alt="Banner 3">
+            </div>
+            <div><p>Encontre os melhores produtos aqui!</p></div>  
+          </div>
+     
+    </section> <!--FIM DESTAQUE-->
+    </div> 
+
+   
+
+    <main>
+        <section id="sobre">
+            <div class="txt-sobre">
+            <h2>Sobre Nós</h2>
+            <p>Descubra o mundo encantador da Lana Del Rey em nossa loja online, onde você encontrará uma variedade de produtos exclusivos e colecionáveis que celebram a música e o estilo da renomada artista. 
+            <br><br>
+            De discos, vestidos, jaquetas de couro, cada peça reflete o glamour e a nostalgia que definem a estética única da musa do indie. Explore nossa seleção e deixe-se envolver pelo encantamento intemporal de Lana del rey.
+            <br><br>
+            Além disso, não perca nossa seleção especial de vinis autografados, CDs raros e outros itens colecionáveis que certamente serão tesouros para qualquer fã dedicado.
+            <br><br>
+            Nosso compromisso é oferecer uma experiência de compra excepcional, com envio rápido e atendimento ao cliente dedicado para garantir sua satisfação.
+            <br><br>
+            Ao fazer compras em nossa loja oficial, você está apoiando diretamente o trabalho e o talento desta artista excepcional.
+            <br><br>
+            Explore a Loja Oficial de Lana Del Rey hoje e leve para casa um pedaço do universo mágico desta musa da música! </p>
+            <img src="imagem/discos.png">
+            </div>
+        </section>
+
+        <div class="container">
+          <div class="lista">
+            <h2>Lista de Produtos</h2>
+          </div>
+          
+          <ul id="product-list">
+            <!-- Aqui serão adicionados os produtos -->
+          </ul>
+        
+          <button onclick="adicionarProduto()">Adicionar Produto</button>
+       <!--SCRIPT LIOSTA DE PRODUTOS-->
+          <script>
+          function adicionarProduto() {
+            var productList = document.getElementById("product-list");
+      
+            var novoProduto = document.createElement("li");
+            novoProduto.className = "product-item";
+      
+            var imagemProduto = document.createElement("img");
+            imagemProduto.src = "imagem/180493-400-400.png"; // Substitua pelo caminho da nova imagem
+            imagemProduto.alt = "Novo Produto";
+      
+            var tituloProduto = document.createElement("h3");
+            tituloProduto.textContent = "Novo Produto";
+      
+            var descricaoProduto = document.createElement("p");
+            descricaoProduto.textContent = "Descrição do Novo Produto";
+      
+            var precoProduto = document.createElement("span");
+            precoProduto.className = "price";
+            precoProduto.textContent = "$19.99"; // Substitua pelo preço do novo produto
+      
+            novoProduto.appendChild(imagemProduto);
+            novoProduto.appendChild(tituloProduto);
+            novoProduto.appendChild(descricaoProduto);
+            novoProduto.appendChild(precoProduto);
+      
+            productList.appendChild(novoProduto);
+          }
+        </script>
+        </div>
+        <script src="script.js"></script>
+
+            <ul class="product-list">
+              <li class="product-item">
+                <img src="imagem/discoborntodie-removebg-preview.png" alt="Produto 1">
+                <h3>Born To Die Disco.</h3>
+                <p>Born to Die é o segundo álbum de estúdio da cantora Lana Del Rey, lançado em 2012. O álbum é conhecido pelos hits "Summertime Sadness", "Video Games" e "Blue Jeans", e aborda temas como relacionamentos conturbados, ascensão à fama e patriotismo.</p>
+                <span class="price">$310.00</span>
+              </li>
+              <li class="product-item">
+                <img src="imagem/bolsa1-removebg-preview.png" alt="Produto 2">
+                <h4>Eco Bag</h4>
+                <p>Linda e confortavel, construída para durar, nossa ecobag é feita de materiais resistentes que suportam o peso das suas compras diárias sem comprometer a qualidade.</p>
+                <span class="price">$120.90</span>
+              </li>
+              <li class="product-item">
+                <img src="imagem/disco55-removebg-preview (1).png" alt="Produto 3">
+                <h5>Blue Banisters Disco </h5>
+                <p>Blue Banisters é o oitavo álbum de estúdio da cantora e compositora norte-americana Lana Del Rey. Lançado a 22 de outubro de 2021, o álbum tem 15 faixas e uma duração total de 61:50.</p>
+                <span class="price">$300.99</span>
+              </li>
+              <li class="product-item">
+                <img src="imagem/moletom10-removebg-preview.png" alt="Produto 4">
+                <h6>Moletom</h6>
+                <p>Moletom Unissex: Conforto e Estilo em Todas as Estações.  Fabricado com um tecido macio e agradável ao toque, este moletom proporciona o máximo conforto durante todo o dia, mantendo-o aquecido nos dias mais frios.</p>
+                <span class="price">$150.99</span>
+              </li>
+            </ul>
+            <script src="script.js"></script>
+          </div> <!--FIM PRODUTOS-->
+      
+          <section id="contact">
+            <div class="container">
+              <h2>Contato</h2>
+              <p>Estamos aqui para ajudar. Entre em contato conosco se tiver alguma dúvida ou precisar de assistência.</p>
+              <form action="enviar.php" method="post">
+                <input type="text" name="nome" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+              </form>
+            </div>
+          </section>
+    </main>
+
+    <footer>
+   <p>&copy; 2024 Del Rey Emporium Online. Todos os direitos reservados.</p>
+    </footer>
+     
+    <!--SCRIPT BANNERS-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const intervalTime = 3000; // Intervalo de tempo entre os slides (em milissegundos)
+          const carouselImages = document.querySelector('.carousel-images');
+          const slides = carouselImages.querySelectorAll('img');
+          let slideIndex = 0;
+          let slideInterval;
+      
+          function nextSlide() {
+            slides[slideIndex].style.display = 'none';
+            slideIndex = (slideIndex + 1) % slides.length;
+            slides[slideIndex].style.display = 'block';
+          }
+      
+          // Iniciar o carrossel automaticamente
+          slideInterval = setInterval(nextSlide, intervalTime);
+      
+          // Pausar o carrossel quando o mouse estiver sobre ele
+          carouselImages.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+          });
+      
+          // Retomar o carrossel quando o mouse sair dele
+          carouselImages.addEventListener('mouseleave', () => {
+            slideInterval = setInterval(nextSlide, intervalTime);
+          });
+        });
+      </script>
+
+</body>
+</html>
